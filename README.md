@@ -1,4 +1,4 @@
-# ECS639U Group Coursework - Group 5
+# Group Coursework - Group 5
 
 ### Instructions to run project
 -Download zip folder and unzip it
