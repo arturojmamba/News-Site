@@ -1,63 +1,34 @@
-# Template for ECS639U Group Coursework
+# ECS639U Group Coursework - Group 5
 
-This template should be used as the starting point for your group coursework in the module ECS639U Web Programming (at Queen Mary University of London). Use Git (github.qmul.ac.uk) to collaborate on the coursework with your group members. Module leader: Paulo Oliva <[p.oliva@qmul.ac.uk](mailto:p.oliva@qmul.ac.uk)>
+### Instructions to run project
+-Download zip folder and unzip it
 
-## Local development
+-create conda environment with python 3.10 and activate environment
 
-To run this project in your development machine, follow these steps:
+-Install requirements in conda environment (run: pip install -r requirements.txt)
 
-1. Create and activate a conda environment
+-Run python manage.py runserver on the main directory of assignment folder
 
-2. Fork this repo and clone your fork (or clone the forked repo of one of your team members), e.g.
+-In seperate terminal, cd into frontend directory of assignment folder
 
-    ```console
-    $ git clone https://github.qmul.ac.uk/<username>/cwgroup
-    ```
+-Run: npm install then run: npm run dev
 
-3. Install Pyhton dependencies (main folder):
+-On browser go to: 127.0.0.1:8000/
 
-    ```console
-    $ pip install -r requirements.txt
-    ```
+## List of group members
 
-4. Create a development database:
+Arturo Jose Mamba
+Assigned to work on the backend infrastructure 
+Work completed consisted was all of backend implementation: models, forms, urls, views as well configuring settings to ensure everything works in sync with frontend, furthermore managing styling for login and signups page, vue routing and work completed also consisted of managing any issues encountered and assisting with frontend issues: comments implementation, and Favourite Page (Vue)
 
-    ```console
-    $ python manage.py migrate
-    ```
+Kelvin Amadi
+Assigned to work on the frontend infrastructure
+Work completed consisted of profile page (vue) as well as features within profile page such editing profile information (Vue) and editing favourite categories (vue), implementing the use of pinia (userDetails) and store within app.vue.
 
-5. Install JavaScript dependencies (from 'frontend' folder):
+Beebek Limbu
+Assigned to work on the frontend infrastructure
+Work completed consisted of working on mainPage (vue), enabling users to see all articles displayed by seperate categories, adding comments components, reply and delete comments and also functionality to see their favourite categories and articles within it, all supported with necessary styling
 
-    ```console
-    $ npm install
-    ```
-
-6. If everything is alright, you should be able to start the Django development server from the main folder:
-
-    ```console
-    $ python manage.py runserver
-    ```
-
-7. and the Vue server from the 'frontend' sub-folder:
-
-    ```console
-    $ npm run dev
-    ```
-
-8. Open your browser and go to http://localhost:5173, you will be greeted with a template page.
-
-## OpenShift deployment
-
-Once your project is ready to be deployed you will need to 'build' the Vue app and place it in Django's static folder.
-
-1. The build command in package.json and the vite.config.ts files have already been modified so that when running 'npm run build' the generated JavaScript and CSS files will be placed in the mainapp static folder, and the index.html file will be placed in the templates folder:
-
-    ```console
-    $ npm run build
-    ```
-
-2. You should then follow the instruction on QM+ on how to deploy your app on EECS's OpenShift live server.
-
-## License
-
-This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to [CC0](http://creativecommons.org/publicdomain/zero/1.0/).
+Ramim Mollah
+Assigned to work on the backend
+Creation of README file, requirements.txt and ensuring the project is ready for submission, helping with attempt to deploy app to openshift, testing full functionality of system and ensuring projects meets the different requirements

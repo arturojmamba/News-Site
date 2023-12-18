@@ -1,8 +1,44 @@
-{% block title%} <h2>Log In</h2> {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="module" crossorigin src="/static/api/spa/assets/index-0dc951d4.js"></script>
+    <link rel="stylesheet" href="/static/api/spa/assets/index-0cc3df80.css">
 
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <p>Create an account <a href="/sign-up">Here</a>!</p>
-  <button type="submit">Log In</button>
-</form>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+      .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+      }
+      .form-signin .form-control {
+        height: calc(1.5em + 0.75rem + 2px);
+      }
+      .btn {
+        height: calc(2.5em + 0.5rem + 2px);
+      }
+    </style>
+</head>
+  <body class="text-center">
+
+    <form class="form-signin" method="post">
+        {% csrf_token %}
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        {% load crispy_forms_tags %}
+        {{ form|crispy }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <p class="mt-5 mb-3 text-muted">Don't have an account? <a href="/sign-up/">Sign up</a></p>
+    </form>
+
+  </body>
+</html> 
